@@ -5,6 +5,38 @@
 	<title>Mother's Day Card with Definition</title>
 	<h2>from arnav jain</h2>
 	<style>
+		 #loveButton {
+  background-color: pink;
+  color: white;
+  padding: 30px;
+  font-size: 28px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.heart {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-image: url('https://thumbs.dreamstime.com/b/mother-son-hugging-cartoon-vector-happy-her-97729474.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: heart 1s ease-in-out forwards;
+}
+
+@keyframes heart {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
         #letter {
 			font-size: 25px;
 			font-weight: bold;
@@ -99,6 +131,7 @@
 <body>
     <button onclick="displayLetter()">Display Letter</button>
 	<div id="letter"></div>
+	<button id="loveButton">i love you</button>
 
 
 	<div class="container">
@@ -113,10 +146,14 @@
 	</div>
 
 	<script>
+		
         function displayLetter() {
+			
 			var letter = document.getElementById("letter");
+			
 			letter.innerHTML = "Happy Mother's Day! Today is a special day dedicated to celebrating the amazing person that you are and the love and care that you have always given us. I want to take this opportunity to express my gratitude for all that you have done for me and our family.<br><br><br><br>You are the backbone of our family and the glue that keeps us together. Your selflessness, kindness, and unwavering love have been an inspiration to me and everyone who knows you. You have always put our needs before your own and have sacrificed so much to make sure that we are happy and safe. I cannot thank you enough for all that you have done for us.";
 			letter.style.display = "block";
+			
 		}
 		function openCard() {
 			var container = document.querySelector('.container');
@@ -131,5 +168,17 @@
 			var message = document.querySelector('.message');
 			message.style.display = 'block';
 		}
+		loveButton.addEventListener('click', () => {
+  const heart = document.createElement('div');
+  const loveButton = document.getElementById('loveButton');
+  heart.classList.add('heart');
+  heart.style.top = `${loveButton.offsetTop - 50}px`;
+  heart.style.left = `${loveButton.offsetLeft + 50}px`;
+  loveButton.appendChild(heart);
+
+  setTimeout(() => {
+    heart.remove();
+  }, 1000);
+});
 	</script>
 </body
