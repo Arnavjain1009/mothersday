@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Happy Mother's Day</title>
+	<style>
+    #loveButton {
+  background-color: red;
+  color: white;
+  padding: 10px;
+  font-size: 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.heart {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-image: url('https://www.xavierahollander.com/images/stories/newsletter/Candye/hart-15737.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: heart 1s ease-in-out forwards;
+}
+
+@keyframes heart {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+		body {
+			background-image: url('https://www.bibliatodo.com/En/christian-pictures/files/2019/05/en-img-858-happy-mothers-day.jpg');
+			font-family: Arial, sans-serif;
+			text-align: center;
+		}
+		h1 {
+			color: #b30000;
+			font-size: 48px;
+			margin-top: 50px;
+		}
+		button {
+			background-color: #b30000;
+			color: white;
+			font-size: 24px;
+			padding: 10px 20px;
+			border-radius: 5px;
+			cursor: pointer;
+			margin-top: 50px;
+			border: none;
+			outline: none;
+		}
+    button1 {
+			background-color: #00ff00;
+			color: white;
+			font-size: 24px;
+			padding: 10px 20px;
+			border-radius: 5px;
+			cursor: pointer;
+			margin-top: 50px;
+			border: none;
+			outline: none;
+		}
+		#surprise {
+			display: none;
+			margin-top: 50px;
+		}
+		img {
+			width: 300px;
+			height: 300px;
+			margin-top: 50px;
+		}
+		p {
+			color: #4d4d4d;
+			font-size: 24px;
+			margin-top: 50px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Happy Mother's Day!</h1>
+  <br><br>
+  <button1 onclick="redirectToPage()">memories! </button1>
+ 
+  <img src="https://primary.jwwb.nl/public/q/j/o/temp-tezpakebvtpevljjnwhv/x7kdp7/screenshot2023-03-18220215.png" alt="Mother and child">
+  <button id="loveButton">i love you</button>
+   
+		
+		
+	</div>
+	<script>
+		function showSurprise() {
+			document.getElementById('loveButton').style.display = "block";
+		}
+    function redirectToPage() {
+			window.location.href = "/memories.html";
+		}
+    loveButton.addEventListener('click', () => {
+  const heart = document.createElement('div');
+  const loveButton = document.getElementById('loveButton');
+  heart.classList.add('heart');
+  heart.style.top = `${loveButton.offsetTop - 50}px`;
+  heart.style.left = `${loveButton.offsetLeft + 50}px`;
+  loveButton.appendChild(heart);
+
+  setTimeout(() => {
+    heart.remove();
+  }, 1000);
+});
+	</script>
+</body>
+</html>

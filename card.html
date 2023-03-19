@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Button to display letter</title>
+	<title>Mother's Day Card with Definition</title>
+	<style>
+        #letter {
+			font-size: 25px;
+			font-weight: bold;
+			text-align: center;
+			margin-top: 50px;
+			display: none;
+            color: black;
+		}
+
+         body {
+                background-color:red;
+                font-family: Arial, sans-serif;
+                text-align: center;
+            }
+		.container {
+			position: relative;
+			width: 600px;
+			height: 400px;
+			margin: auto;
+			margin-top: 50px;
+			background-color: pink;
+			border-radius: 20px;
+			box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+			overflow: hidden;
+			animation: fold 1s ease forwards;
+		}
+
+		.card {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-image: url('https://www.mightymrs.com/wp-content/uploads/best-mom-ever.jpg');
+			background-size: cover;
+			background-position: center;
+			animation: unfold 1s ease forwards;
+		}
+
+		.message {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-family: Arial, sans-serif;
+			font-size: 30px;
+			text-align: center;
+			color: white;
+			text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+			animation: fadein 1s ease forwards;
+			display: none;
+			z-index: 1;
+			padding: 20px;
+			background-color: rgba(0, 0, 0, 0.8);
+			border-radius: 10px;
+		}
+
+		.message p {
+			margin: 0;
+			padding: 0;
+			line-height: 1.5;
+		}
+
+		@keyframes fold {
+			from {
+				transform: perspective(500px) rotateX(0deg);
+			}
+			to {
+				transform: perspective(500px) rotateX(-90deg);
+			}
+		}
+
+		@keyframes unfold {
+			from {
+				transform: perspective(500px) rotateX(-90deg);
+			}
+			to {
+				transform: perspective(500px) rotateX(0deg);
+			}
+		}
+
+		@keyframes fadein {
+			from {
+				opacity: 0;
+			}
+			to {
+				opacity: 1;
+			}
+		}
+	</style>
+</head>
+<body>
+    <button onclick="displayLetter()">Display Letter</button>
+	<div id="letter"></div>
+
+
+	<div class="container">
+		<div class="card"></div>
+		<div class="message">
+			<p>Happy Mother's Day!</p>
+			<p>Thank you for your love and support.</p>
+			<p>You are the best mom in the world!</p>
+			<hr>
+			<p><strong>Mother's Day Definition:</strong> Mother's Day is a celebration honoring the mother of the family, as well as motherhood, maternal bonds, and the influence of mothers in society.</p>
+		</div>
+	</div>
+
+	<script>
+        function displayLetter() {
+			var letter = document.getElementById("letter");
+			letter.innerHTML = "Happy Mother's Day! Today is a special day dedicated to celebrating the amazing person that you are and the love and care that you have always given us. I want to take this opportunity to express my gratitude for all that you have done for me and our family.<br><br><br><br>You are the backbone of our family and the glue that keeps us together. Your selflessness, kindness, and unwavering love have been an inspiration to me and everyone who knows you. You have always put our needs before your own and have sacrificed so much to make sure that we are happy and safe. I cannot thank you enough for all that you have done for us.";
+			letter.style.display = "block";
+		}
+		function openCard() {
+			var container = document.querySelector('.container');
+			container.style.animation = 'fold 1s ease forwards';
+			setTimeout(function() {
+				container.style.display = 'none';
+				showMessage();
+			}, 1000);
+		}
+
+		function showMessage() {
+			var message = document.querySelector('.message');
+			message.style.display = 'block';
+		}
+	</script>
+</body
