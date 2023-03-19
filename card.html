@@ -3,11 +3,11 @@
 <head>
     <title>Button to display letter</title>
 	<title>Mother's Day Card with Definition</title>
-	<h2>from arnav jain</h2>
+	<h2>From, Arnav Jain</h2>
 	<style>
 		 #loveButton {
-  background-color: pink;
-  color: white;
+  background-color: white;
+  color: purple;
   padding: 30px;
   font-size: 28px;
   border: none;
@@ -15,7 +15,23 @@
   cursor: pointer;
   transition: all 0.5s ease;
 }
-
+#cueButton {
+  background-color: white;
+  color: purple;
+  padding: 30px;
+  font-size: 28px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+h2 {
+			color: purple;
+			text-shadow: 5px 5px 8px #000000;
+			font-size: 50px;
+			margin-top: 50px;
+			
+		}
 .heart {
   position: absolute;
   width: 100px;
@@ -47,7 +63,7 @@
 		}
 
          body {
-                background-color:red;
+			background-image: url('https://primary.jwwb.nl/public/o/w/k/temp-ybefepvefnroziwohrwu/microsoftteams-image3.png');	
                 font-family: Arial, sans-serif;
                 text-align: center;
             }
@@ -129,11 +145,17 @@
 	</style>
 </head>
 <body>
-    <button onclick="displayLetter()">Display Letter</button>
+    <button onclick="displayLetter()"id="cueButton" >CLICK HERE TO READ LETTER</button>
 	<div id="letter"></div>
-	<button id="loveButton">i love you</button>
+	<br><br><br><br>
+	<br><br><br><br>
+	<br><br><br><br>
+	<button id="loveButton">I LOVE YOU MUMMA</button>
 
-
+<br><br><br><br><br>
+<br><br><br><br><br>
+<br><br><br><br><br>
+<br><br><br><br><br>
 	<div class="container">
 		<div class="card"></div>
 		<div class="message">
@@ -149,10 +171,7 @@
 		
         function displayLetter() {
 			
-			var letter = document.getElementById("letter");
-			
-			letter.innerHTML = "Happy Mother's Day! Today is a special day dedicated to celebrating the amazing person that you are and the love and care that you have always given us. I want to take this opportunity to express my gratitude for all that you have done for me and our family.<br><br><br><br>You are the backbone of our family and the glue that keeps us together. Your selflessness, kindness, and unwavering love have been an inspiration to me and everyone who knows you. You have always put our needs before your own and have sacrificed so much to make sure that we are happy and safe. I cannot thank you enough for all that you have done for us.";
-			letter.style.display = "block";
+	        window.location.href = "/letter.html";
 			
 		}
 		function openCard() {
