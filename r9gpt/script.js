@@ -73,7 +73,7 @@ async function getDataFromFirebase() {
   var mydata = "";
   
 async function main(prompt) {
-  if (event.keyCode === 13) {
+  
     const img = document.createElement('img');
     img.src = 'https://i.pinimg.com/originals/53/e9/45/53e945c516cebdffd987b6c2df159db1.jpg';
     img.alt = 'AI';
@@ -84,7 +84,7 @@ async function main(prompt) {
 
     const messageContainer = document.createElement('div');
     messageContainer.className = 'message ai';
-    messageContainer.textContent = "Typing ...";
+    messageContainer.textContent = "in development sorry";
 
     const chatBubble = document.createElement('div');
     chatBubble.className = 'chat';
@@ -178,7 +178,7 @@ alert("please do not refer to openai we are r9gpt")
                         alert("r9gpt has created the ai you are using")
                                 window.location.href = "r9gpt.html"
                               }
-                
+       
         
               
           
@@ -200,4 +200,4 @@ if (e.target.prompt.value != ""){
   // Clear the prompt input
   e.target.prompt.value = '';
 }
-})};
+});
